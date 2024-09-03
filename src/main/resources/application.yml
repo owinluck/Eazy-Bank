@@ -2,8 +2,10 @@ Spring:
   application:
     name: ${SPRING_APP_NAME:Eazy-Bank}
 
-  security:
-    user:
-      name: ${SECURITY_USERNAME:eazybank}
-      password: ${SECURITY_PASSWORD:1234}
+#  security:
+#    user:
+#      name: ${SECURITY_USERNAME:eazybank}
+#      password: ${SECURITY_PASSWORD:1234}
+
+
 
