@@ -4,11 +4,6 @@ Spring:
 
   security:
     user:
-      name: ${SECURITY_USERNAME:`eazybank`}
+      name: ${SECURITY_USERNAME:eazybank}
       password: ${SECURITY_PASSWORD:1234}
 
-  logging:
-    level:
-      org:
-        springframework:
-          security: ${SPRING_SECURITY_LOG_LEVEL:TRACE}
