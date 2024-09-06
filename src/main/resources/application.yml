@@ -1,3 +1,7 @@
+logging:
+  pattern:
+    console: ${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}
+
 Spring:
   application:
     name: ${SPRING_APP_NAME:Eazy-Bank}
@@ -6,6 +10,19 @@ Spring:
 #    user:
 #      name: ${SECURITY_USERNAME:eazybank}
 #      password: ${SECURITY_PASSWORD:1234}
+
+  datasource:
+    url: jdbc:mysql://${DATABASE_HOST:localhost}:${DATABASE_PORT:3306}/${DATABASE_NAME:eazybank}
+    username: root
+    password: 2003
+
+  jpa:
+    show-sql: ${JPA_SHOW_SQL:true}
+    properties:
+      hibernate:
+        format_sql: ${HIBERNATE_FORMAT_SQL:true}
+
+
 
 
 
