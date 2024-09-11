@@ -13,3 +13,14 @@ VALUES ('admin', '{bcrypt}$2a$12$DYLniVPrAfVpTTgvvUjwM.zdcDv.vmRYMX/mHU8Nmq7DoUF
 
 INSERT INTO authorities (username, authority)
 VALUES ('admin', 'admin');
+
+CREATE TABLE customer (
+    `id` INT AUTO_INCREMENT,
+    `email` VARCHAR(45) NOT NULL,
+    `pwd` VARCHAR(200) NOT NULL,
+    `role` VARCHAR(45) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO `customer` VALUES ('owin@gmail.com','{noop}EazyBytes@12345','read');
+INSERT INTO `customer` VALUES ('admin@gmail.com','bcrypt}$2a$12$DYLniVPrAfVpTTgvvUjwM.zdcDv.vmRYMX/mHU8Nmq7DoUFw6L6X6','admin');
